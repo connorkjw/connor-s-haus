@@ -4,14 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script src="/js/includeHTML.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <script src="./js/includeHTML.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header include-html="/html/header.html"></header>
+    <header include-html="./html/header.html"></header>
 
-    <footer include-html="/html/footer.html"></footer>
+    <div class="main_slide_container">
+        <div class="slide_wrap">
+            <ul class="slide_img_wrap">
+                <li class="slide_img01"></li>
+                <li class="slide_img02"></li>
+                <li class="slide_img03"></li>
+                <li class="slide_img04"></li>
+            </ul>
+            <ul class="slide_dot_wrap">
+                <li class="slide_dot01"></li>
+                <li class="slide_dot02"></li>
+                <li class="slide_dot03"></li>
+                <li class="slide_dot04"></li>
+            </ul>
+            <div class="direction_left"></div>
+            <div class="direction_right"></div>
+        </div>
+    </div>
+
+    <footer include-html="./html/footer.html"></footer>
+
+
     <script>
+        document.getElementsByClassName('slide_dot01')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide_img01')[0].style.transform = 'translateX(0px)';
+        });
+        document.getElementsByClassName('slide_dot02')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide_img02')[0].style.transform = 'translateX(-600px)';
+        });
+        document.getElementsByClassName('slide_dot03')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide_img03')[0].style.transform = 'translateX(-1200px)';
+        });
+        document.getElementsByClassName('slide_dot04')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide_img04')[0].style.transform = 'translateX(-1800px)';
+        });
+
         includeHTML();
     </script>
 </body>
