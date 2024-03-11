@@ -14,10 +14,10 @@
     <div class="main_slide_container">
         <div class="slide_wrap">
             <ul class="slide_img_wrap">
-                <li class="slide_img01"></li>
-                <li class="slide_img02"></li>
-                <li class="slide_img03"></li>
-                <li class="slide_img04"></li>
+                <li class="slide_img"></li>
+                <li class="slide_img"></li>
+                <li class="slide_img"></li>
+                <li class="slide_img"></li>
             </ul>
             <ul class="slide_dot_wrap">
                 <li class="slide_dot01"></li>
@@ -35,17 +35,37 @@
 
     <script>
         document.getElementsByClassName('slide_dot01')[0].addEventListener('click', function(){
-            document.getElementsByClassName('slide_img01')[0].style.transform = 'translateX(0px)';
+            var slide = document.getElementsByClassName('slide_img');
+            for(i = 0; i < slide.length; i++){
+                slide[i].style.transform = 'translateX(0px)';
+            }
         });
         document.getElementsByClassName('slide_dot02')[0].addEventListener('click', function(){
-            document.getElementsByClassName('slide_img02')[0].style.transform = 'translateX(-600px)';
+            var slide = document.getElementsByClassName('slide_img');
+            for(i = 0; i < slide.length; i++){
+                slide[i].style.transform = 'translateX(-600px)';
+            }
         });
         document.getElementsByClassName('slide_dot03')[0].addEventListener('click', function(){
-            document.getElementsByClassName('slide_img03')[0].style.transform = 'translateX(-1200px)';
+            var slide = document.getElementsByClassName('slide_img');
+            for(i = 0; i < slide.length; i++){
+                slide[i].style.transform = 'translateX(-1200px)';
+            }
         });
         document.getElementsByClassName('slide_dot04')[0].addEventListener('click', function(){
-            document.getElementsByClassName('slide_img04')[0].style.transform = 'translateX(-1800px)';
+            var slide = document.getElementsByClassName('slide_img');
+            for(i = 0; i < slide.length; i++){
+                slide[i].style.transform = 'translateX(-1800px)';
+            }
         });
+
+        document.getElementsByClassName('direction_left')[0].addEventListener('click', function(){
+            var left = document.getElementsByClassName('slide_img');
+
+            for(i = 0; i < left.length; i++){
+                left[i].style.transform = 'translateX(-1800px)';
+            }
+        })
 
         includeHTML();
     </script>
