@@ -19,7 +19,7 @@
 .logo_menu_wrap{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;full_screen_container
 }
 .top_logo_wrap{
     font-size: 24px;
@@ -79,4 +79,11 @@
     position: fixed;
     top: 50px;
     right: 50px;
+}
+
+/**/
+@media(max-width:860px){
+    .menu_warpper{
+        display: none;
+    }
 }
