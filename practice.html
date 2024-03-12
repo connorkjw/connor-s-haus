@@ -9,63 +9,53 @@
     <title>Document</title>
 </head>
 <body>
-    <header include-html="./html/header.html"></header>
 
-    <div class="main_slide_container">
-        <div class="slide_wrap">
-            <ul class="slide_img_wrap">
-                <li class="slide_img"></li>
-                <li class="slide_img"></li>
-                <li class="slide_img"></li>
-                <li class="slide_img"></li>
-            </ul>
-            <ul class="slide_dot_wrap">
-                <li class="slide_dot01"></li>
-                <li class="slide_dot02"></li>
-                <li class="slide_dot03"></li>
-                <li class="slide_dot04"></li>
-            </ul>
-            <div class="direction_left"></div>
-            <div class="direction_right"></div>
+    <div style="overflow: hidden">
+        <div class="slide-container">
+          <div class="slide-box">
+            <img src="./practiceimg/car1.png">
+          </div>
+          <div class="slide-box">
+            <img src="./practiceimg/car2.png">
+          </div>
+          <div class="slide-box">
+            <img src="./practiceimg/car3.png">
+          </div>
         </div>
-    </div>
+     </div>
+     <button class="prev">이전</button>
+     <button class="slide-1">1</button>
+     <button class="slide-2">2</button>
+     <button class="slide-3">3</button>
+     <button class="next">다음</button>
 
-    <footer include-html="./html/footer.html"></footer>
 
 
     <script>
-        document.getElementsByClassName('slide_dot01')[0].addEventListener('click', function(){
-            var slide = document.getElementsByClassName('slide_img');
-            for(i = 0; i < slide.length; i++){
-                slide[i].style.transform = 'translateX(0px)';
-            }
-        });
-        document.getElementsByClassName('slide_dot02')[0].addEventListener('click', function(){
-            var slide = document.getElementsByClassName('slide_img');
-            for(i = 0; i < slide.length; i++){
-                slide[i].style.transform = 'translateX(-600px)';
-            }
-        });
-        document.getElementsByClassName('slide_dot03')[0].addEventListener('click', function(){
-            var slide = document.getElementsByClassName('slide_img');
-            for(i = 0; i < slide.length; i++){
-                slide[i].style.transform = 'translateX(-1200px)';
-            }
-        });
-        document.getElementsByClassName('slide_dot04')[0].addEventListener('click', function(){
-            var slide = document.getElementsByClassName('slide_img');
-            for(i = 0; i < slide.length; i++){
-                slide[i].style.transform = 'translateX(-1800px)';
-            }
-        });
+        var 지금사진 = 1;
+        document.getElementsByClassName('next')[0].addEventListener('click', function(){
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + 지금사진 + '00vw)';
+                지금사진 ++;
+        })
 
-        document.getElementsByClassName('direction_left')[0].addEventListener('click', function(){
-            var left = document.getElementsByClassName('slide_img');
-
-            for(i = 0; i < left.length; i++){
-                left[i].style.transform = 'translateX(-1800px)';
+        document.getElementsByClassName('prev')[0].addEventListener('click', function(){
+            if(지금사진 > 1){
+                지금사진 --;
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(+' + ( 지금사진 - 1 ) + '00vw)';
             }
         })
+
+
+       document.getElementsByClassName('slide-1')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0)';
+       })
+       document.getElementsByClassName('slide-2')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-100vw)';
+       })
+       document.getElementsByClassName('slide-3')[0].addEventListener('click', function(){
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-200vw)';
+       })
+
 
         includeHTML();
     </script>
