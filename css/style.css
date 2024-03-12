@@ -1,8 +1,8 @@
 
-.warpper{
+.wrapper{
     width: 100%;
 }
-.header_warpper{
+.header_wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,24 +27,24 @@
     color: #202020;
     margin-right: 36px;
 }
-.menu_warpper ul{
+.menu_wrapper ul{
     display: flex;
 }
-.menu_warpper ul li{
+.menu_wrapper ul li{
     margin-right: 16px;
     font-size: 1rem;
     cursor:pointer;
     letter-spacing: 2px;
     color: #404040;
 }
-.menu_warpper ul li:last-child{
+.menu_wrapper ul li:last-child{
     margin-right: 0;
 }
 .btn_wrapper button{
     display: flex;
 }
 
-.main_warpper{
+.main_wrapper{
     width: 100%;
     display: ;
 }
@@ -83,7 +83,7 @@
 
 /**/
 @media(max-width:860px){
-    .menu_warpper{
+    .menu_wrapper{
         display: none;
     }
 }
