@@ -45,10 +45,27 @@
 }
 
 .main_wrapper{
-    width: 100%;
-    display: ;
+    max-width: 1150px;
+    padding: 20px;
+    margin: 0 auto;
 }
-
+.main_top_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 6px;
+    width: 100%;
+    padding: 30px 0;
+}
+.main_txt{
+    font-family: "DM Serif Display", serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 4rem;
+    color: #020202;
+}
 .full_screen_container{
     position: fixed;
     top:0;
@@ -150,9 +167,23 @@
     color: #020202;
     margin-bottom: 10px;
 }
+.sec_content_wrap{
+    width: 100%;
+    background-color: #404040;
+    height: 300px;
+    border-radius: 8px;
+}
 /**/
 @media(max-width:860px){
     .menu_wrapper{
         display: none;
     }
+    .main_top_wrap{
+        padding-top: 0;
+    }
+    .main_txt{
+        font-size: 2.4rem;
+        font-weight: 800;
+    }
+    
 }
