@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="practice.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/includeHTML.js"></script>
+    <style>
+      .form-hide{
+        display: none;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+</div>
+<div class="card-group container">
+    <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5 class="title">Card title</h5>
+        <p>가격 : <span class="price">70000</span>원</p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5 class="title">Card title</h5>
+        <p>가격 : <span class="price">70000</span>원</p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5 class="title">Card title</h5>
+        <p>가격 : <span class="price">770000</span>원</p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>
+  </div>
+  
+  <form class="container my-5 form-group">
+    <p>상품선택</p>
+    <select class="form-select mt-2">
+      <option class="hat">모자</option>
+      <option class="shirt">셔츠</option>
+      <option class="">바지</option>
+    </select>
+    <select class="hat_size form-select mt-2 form-hide">
+      <option>55</option>
+      <option>65</option>
+    </select>
+</form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+
+      document.getElementsByClassName('form-select')[0].addEventListener('change', function(){
+      var valueS = this.value; // 변경된 값 가져오기
+    
+    if (valueS === '모자') {
+      document.getElementsByClassName('form-select')[1].classList.remove('form-hide');
+      var 모자 = `<option>50</option>
+       <option>55</option>`;
+       document.getElementsByClassName('form-select')[1].innerHTML = 모자;
+    } if (valueS === '셔츠'){
+      document.getElementsByClassName('form-select')[1].classList.remove('form-hide');
+      var 셔츠 = `<option>95</option>
+       <option>100</option>`;
+       document.getElementsByClassName('form-select')[1].innerHTML = 셔츠;
+    }
+    else if(valueS === '바지'){
+      document.getElementsByClassName('form-select')[1].classList.remove('form-hide');
+      var 바지 = `<option>28</option>
+       <option>30</option>`;
+       document.getElementsByClassName('form-select')[1].innerHTML = 바지;
+
+    }
+});
+      
+
+        var products = [
+            { id : 0, price : 70000, title : 'Blossom Dress' },
+            { id : 1, price : 50000, title : 'Springfield Shirt' },
+            { id : 2, price : 60000, title : 'Black Monastery' }
+        ];
+
+        for(var i = 0; i < products.length; i++){  //i가 배열의 갯수 -1 까지 실행
+            var titleElement = document.getElementsByClassName('title')[i]; //title 클래스 네임을 가진 [i]번째
+            var priceElement = document.getElementsByClassName('price')[i]; //price 클래스 네임을 가진 [i]번째
+
+            titleElement.innerHTML = products[i].title; //프로덕트[i]번째에 제목 넣기 (위에 반복문에서 명령된 번호)
+            priceElement.innerHTML = products[i].price; //프로덕트[i]번째에 가격 넣기 (위에 반복문에서 명령된 번호)
+
+        }
+
+
+        includeHTML();
+    </script>
+</body>
+</html>
