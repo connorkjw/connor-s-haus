@@ -15,11 +15,11 @@ function includeHTML() {
                 headerElement.innerHTML = this.responseText;
 
                 document.getElementsByClassName('menuShow')[0].addEventListener('click', function(){
-                    document.getElementsByClassName('full_screen_container')[0].style.display = 'block';
+                    document.getElementsByClassName('full_screen_container')[0].classList.add('menu_show');
                 })
                 
                 document.getElementById('menuHide').addEventListener('click', function(){
-                    document.getElementsByClassName('full_screen_container')[0].style.display = 'none';
+                    document.getElementsByClassName('full_screen_container')[0].classList.remove('menu_show');      
                 }) 
             }
         };
