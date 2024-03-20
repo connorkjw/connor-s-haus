@@ -292,24 +292,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
+    padding-right: 8px;
+    font-size: 0.9rem;
+    color: #020202;
+}
+.tag_badge{
     padding: 8px 12px;
     border: 1px solid #c7c7c7;
     border-radius: 20px;
-    font-size: 0.9rem;
-    color: #020202;
 }
 /**/
 @media(max-width:860px){
     .header_area{
-        padding: 24px;
+        padding: 20px;
         border: none;
     }
     .menu_wrapper{
         display: none;
     }
     .main_wrapper{
-        padding: 24px;
+        padding: 20px;
     }
     .main_top_wrap{
         padding-top: 0;
@@ -336,16 +338,13 @@
     }
     .basic_tit_wrap{
         width: 100%;
-        padding: 24px;
+        padding: 20px;
         border-bottom: 1px solid #ededed;
         border-right: none;
     }
     .basic_explanation_wrap{
         width: 100%;
-        padding: 24px;
-    }
-    .circle_list_wrap ul li{
-        margin-right: 12px;
+        padding: 20px;
     }
     .circle_list_wrap ul li .circle_list_box{
         width: 60px;
@@ -355,7 +354,7 @@
         overflow-x: auto;
         overflow-y: hidden;
         margin: 16px -24px 0;
-        padding-right: 48px;
+        padding-right: 44px;
         width: 100%;
         box-sizing: content-box;
         white-space: nowrap;
@@ -363,8 +362,8 @@
         scrollbar-width: none;
     }
     .circle_list_wrap ul{
-        display: block;
         overflow: visible;
+        width: auto;
         margin: 0;
         padding: 0 24px;
         white-space: nowrap;
@@ -375,11 +374,38 @@
         display: none;
     }
     .circle_list_wrap ul li{
-        display: table-cell;
+        display: flex;
+        margin-right: 0;
         padding: 0 12px 0 0;
         box-sizing: border-box;
         line-height: 1;
         text-align: center;
     }
-    .circle_list_wrap ul li:last-child{}
+    .circle_list_wrap ul li:last-child{
+        padding-right: 20px;
+    }
+    .overflow_slide_wrap{
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin: 16px -24px 0;
+        padding-right: 44px;
+        width: 100%;
+        box-sizing: content-box;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .overflow_slide_wrap .tag_wrap{
+        flex-wrap: nowrap;
+        overflow: visible;
+        width: auto;
+        margin: 0;
+        padding: 0 24px;
+        white-space: nowrap;
+        text-align: center;
+        box-sizing: content-box;
+    }
+    .tag_wrap li:last-child{
+       padding-right: 20px;
+    }
 }
