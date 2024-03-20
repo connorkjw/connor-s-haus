@@ -264,8 +264,6 @@
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-y: auto;
 }
 .circle_list_wrap ul::-webkit-scrollbar {
     display: none;
@@ -353,5 +351,35 @@
         width: 60px;
         height: 60px;
     }
-    
+    .circle_list_wrap{
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin: 16px -24px 0;
+        padding-right: 48px;
+        width: 100%;
+        box-sizing: content-box;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .circle_list_wrap ul{
+        display: block;
+        overflow: visible;
+        margin: 0;
+        padding: 0 24px;
+        white-space: nowrap;
+        text-align: center;
+        box-sizing: content-box;
+    }
+    .circle_list_wrap ul::-webkit-scrollbar {
+        display: none;
+    }
+    .circle_list_wrap ul li{
+        display: table-cell;
+        padding: 0 12px 0 0;
+        box-sizing: border-box;
+        line-height: 1;
+        text-align: center;
+    }
+    .circle_list_wrap ul li:last-child{}
 }
