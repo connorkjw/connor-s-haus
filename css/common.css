@@ -88,6 +88,6 @@ input::placeholder {
 
 @media(max-width:860px){
     html, body{
-        font-size: 12px;
+        font-size: 13px;
     }
 }
