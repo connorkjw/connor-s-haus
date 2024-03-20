@@ -85,3 +85,9 @@ input::placeholder {
 .no-js {
     display: none;
 }
+
+@media(max-width:860px){
+    html, body{
+        font-size: 12px;
+    }
+}
