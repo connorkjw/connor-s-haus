@@ -17,7 +17,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 28px;
-    border: 1px solid #ededed;
+    /* border: 1px solid #ededed; */
     border-top: none;
     border-bottom: none;
 }
@@ -37,9 +37,9 @@
 }
 .menu_wrapper ul li{
     margin-right: 16px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor:pointer;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #404040;
 }
 .menu_wrapper ul li:last-child{
@@ -190,8 +190,8 @@
     max-width: 1280px;
     box-sizing: border-box;
     margin: 0 auto;
-    border-right: 1px solid #ededed;
-    border-left: 1px solid #ededed;
+    /* border-right: 1px solid #ededed; */
+    /* border-left: 1px solid #ededed; */
 }
 .sub_top_wrap{
     display: flex;
@@ -257,7 +257,7 @@
     line-height: 1.6rem;
 }
 .circle_list_wrap{
-    margin-top: 32px;
+    margin-top: 24px;
 }
 .circle_list_wrap ul{
     width: 100%;
@@ -273,19 +273,40 @@
     justify-content: center;
     align-items: center;
     width: max-content;
-    margin-right: 18px;
+    margin-right: 12px;
+    font-size: 0.9rem;
 }
 .circle_list_wrap ul li .circle_list_box{
     width: 80px;
     height: 80px;
     margin-bottom: 12px;
     border-radius: 50%;
-    background-color: #ededed;
+    /* background-color: #ededed; */
+    box-shadow: 5px 3px 8px rgba(0, 0, 0, 0.1);
+    background-image: url("../images/skill_logo_all.png");
+    background-size: auto;
 }
+.circle_list_wrap ul li .circle_list_box.ps{
+    background-position: top 10px left 1px;
+}
+.circle_list_wrap ul li .circle_list_box.ai{
+    background-position: top 10px left -63px;
+}
+.circle_list_wrap ul li .circle_list_box.html{
+    background-position: top 11px left -128px;
+}
+.circle_list_wrap ul li .circle_list_box.css{
+    background-position: top 12px left -191px;
+}
+.circle_list_wrap ul li .circle_list_box.bt{
+    background-position: top 10px left -257px;
+}
+
+
 .tag_wrap{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 18px;
+    margin-top: 24px;
 }
 .tag_wrap li{
     display: flex;
@@ -346,8 +367,8 @@
         padding: 20px;
     }
     .circle_list_wrap ul li .circle_list_box{
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
     .circle_list_wrap{
         margin-top: 18px;
@@ -380,7 +401,22 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-    .tag_wrap li:last-child{
-      
+    .overflow_slide_wrap .tag_wrap:-webkit-scrollbar {
+        display: none; /* 스크롤바를 숨깁니다. */
+      }
+    
+    .circle_list_wrap ul li .circle_list_box.ps{
+        background-position: top 5px left -4px;
     }
-}
+    .circle_list_wrap ul li .circle_list_box.ai{
+        background-position: top 5px left -68px;
+    }
+    .circle_list_wrap ul li .circle_list_box.html{
+        background-position: top 6px left -133px;
+    }
+    .circle_list_wrap ul li .circle_list_box.css{
+        background-position: top 6px left -197px;
+    }
+    .circle_list_wrap ul li .circle_list_box.bt{
+        background-position: top 5px left -262px;
+    }
