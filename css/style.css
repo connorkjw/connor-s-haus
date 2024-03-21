@@ -401,9 +401,9 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-    .overflow_slide_wrap .tag_wrap:-webkit-scrollbar {
-        display: none; /* 스크롤바를 숨깁니다. */
-      }
+    .overflow_slide_wrap ul.tag_wrap::-webkit-scrollbar {
+        display: none;
+    }
     
     .circle_list_wrap ul li .circle_list_box.ps{
         background-position: top 5px left -4px;
