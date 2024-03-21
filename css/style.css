@@ -193,7 +193,7 @@
     /* border-right: 1px solid #ededed; */
     /* border-left: 1px solid #ededed; */
 }
-.sub_top_wrap{
+/*.sub_top_wrap{
     display: flex;
     align-items: center;
     position: relative;
@@ -202,7 +202,7 @@
     padding: 50px 0 50px 32px;
     background-color: #ffca0a;
     font-size: 2rem;
-}
+}*/
 
 .basic_cont_wrap{
     display: flex;
